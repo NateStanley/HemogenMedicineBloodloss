@@ -5,9 +5,9 @@
 		<PlatformTarget>x64</PlatformTarget>
 
 		<!-- Modify [RootNamespace], [AssemblyName], [OutputPath], [VersionPrefix] -->
-		<RootNamespace>Template</RootNamespace>
-		<AssemblyName>Template</AssemblyName>
-		<OutputPath>../1.3/Assemblies</OutputPath>
+		<RootNamespace>HemogenMedicineBloodloss</RootNamespace>
+		<AssemblyName>HemogenMedicineBloodloss</AssemblyName>
+		<OutputPath>../1.4/Assemblies</OutputPath>
 		<VersionPrefix>1.0.0.0</VersionPrefix>
 
 		<!-- do not generate pdb file -->

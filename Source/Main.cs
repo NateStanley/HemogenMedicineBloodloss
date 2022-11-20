@@ -1,47 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-
-using UnityEngine;
-using Verse;
-using Verse.AI;
-using Verse.AI.Group;
-using Verse.Sound;
-using Verse.Noise;
-using Verse.Grammar;
+﻿using Verse;
 using RimWorld;
-using RimWorld.Planet;
+using HarmonyLib;
 
-// using System.Reflection;
-// using HarmonyLib;
-
-namespace Template
+namespace HemogenMedicineBloodloss
 {
-    [DefOf]
-    public class TemplateDefOf
-    {
-        public static LetterDef success_letter;
-    }
 
-    public class MyMapComponent : MapComponent
-    {
-        public MyMapComponent(Map map) : base(map){}
-        public override void FinalizeInit()
-        {
-            Messages.Message("Success", null, MessageTypeDefOf.PositiveEvent);
-            Find.LetterStack.ReceiveLetter("Success", TemplateDefOf.success_letter.description, TemplateDefOf.success_letter, null);
-        }
-    }
 
     [StaticConstructorOnStartup]
-    public static class Start
+    public static class HemogenMedicineBloodloss
     {
-        static Start()
+        static HemogenMedicineBloodloss()
         {
-            Log.Message("Mod template loaded successfully!");
+            Log.Message("HemogenMedicineBloodloss loaded successfully!");
+
+            Harmony harmony = new Harmony("rimworld.mod.dogwithafro.hemogenmedicinebloodloss");
+            harmony.Patch(AccessTools.Method(typeof(TendUtility), nameof(TendUtility.DoTend)), 
+                postfix: new HarmonyMethod(typeof(HemogenMedicineBloodloss), nameof(DoTend_PostFix)));
+        }
+
+        private static void DoTend_PostFix(Pawn doctor, Pawn patient, Medicine medicine)
+        {
+            //check if medicine is even present lol
+            if(medicine != null)
+            {
+                //check if medicine has the mod extension "CuresBloodloss" as true
+                if (medicine.def.HasModExtension<CuresBloodlossModExtension>())
+                {
+                    CuresBloodlossModExtension extension = medicine.def.GetModExtension<CuresBloodlossModExtension>();
+                    if (extension.CuresBloodloss)
+                    {
+                        //check if patient has hediff BloodLoss
+                        Hediff bloodloss = patient.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.BloodLoss);
+                        if (bloodloss != null)
+                        {
+                            //remove hediff BloodLoss
+                            patient.health.RemoveHediff(bloodloss);
+                        }
+                    }
+                }
+            }
         }
     }
 
+
+    public class HemogenMedicineBloodlossConfig : Mod
+    {
+        public HemogenMedicineBloodlossConfig(ModContentPack content) : base(content)
+        {
+            Log.Message("Inherited HemogenMedicineBloodloss Config class loaded");
+        }
+    }
 }
+
+

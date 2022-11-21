@@ -21,7 +21,7 @@ namespace HemogenMedicineBloodloss
         public override void ExposeData()
         {
             Scribe_Values.Look(ref shouldMedicineHealBloodloss, "shouldMedicineHealBloodloss", true);
-            Scribe_Values.Look(ref bloodlossHealAmount, "bloodlossHealAmount", 0.8f);
+            Scribe_Values.Look(ref bloodlossHealAmount, "bloodlossHealAmount");
             base.ExposeData();
         }
     }
@@ -38,17 +38,24 @@ namespace HemogenMedicineBloodloss
         public override void DoSettingsWindowContents(Rect inRect)
         {
             Listing_Standard listingStandard = new Listing_Standard();
+            string bloodLossHealAmountString = settings.bloodlossHealAmount.ToString();
+
             listingStandard.Begin(inRect);
-            listingStandard.CheckboxLabeled("Should medicine heal bloodloss?", ref settings.shouldMedicineHealBloodloss);
-            listingStandard.Label("Bloodloss heal amount (vanilla hemogen heals 0.35f):");
-            settings.bloodlossHealAmount = listingStandard.Slider(settings.bloodlossHealAmount, 0.1f, 1f);
+            listingStandard.CheckboxLabeled("Should hemogen medicine heal bloodloss?", ref settings.shouldMedicineHealBloodloss);
+            listingStandard.Label("\t--Only affects the treatment of bloodloss when tending other wounds with hemogen medicine.\n\t--No matter what, you will still be able to perform blood transfusions with hemogen medicine.\n\n");
+           
+            //listingStandard.Label("Bloodloss heal amount: " + settings.bloodlossHealAmount +"f");
+            settings.bloodlossHealAmount = listingStandard.SliderLabeled("Bloodloss heal amount: " + bloodLossHealAmountString + "f", settings.bloodlossHealAmount, 0f, 1f);
+            //settings.bloodlossHealAmount = listingStandard.Slider(settings.bloodlossHealAmount, 0.1f, 1.0f);
+            listingStandard.Label("\t--The default vanilla Hemogen Packs heal value is 0.35f");
+
             listingStandard.End();
             base.DoSettingsWindowContents(inRect);
         }
 
         public override string SettingsCategory()
         {
-            return "Hemogen Medicine Cures Bloodloss";
+            return "Hemogen Meds Cure Bloodloss";
         }
 
     }

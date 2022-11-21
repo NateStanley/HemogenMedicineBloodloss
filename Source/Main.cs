@@ -11,7 +11,7 @@ namespace HemogenMedicineBloodloss
     {
         static HemogenMedicineBloodloss()
         {
-            Log.Message("HemogenMedicineBloodloss loaded successfully!");
+            //Log.Message("HemogenMedicineBloodloss loaded successfully!");
 
             Harmony harmony = new Harmony("rimworld.mod.dogwithafro.hemogenmedicinebloodloss");
             harmony.Patch(AccessTools.Method(typeof(TendUtility), nameof(TendUtility.DoTend)), 

@@ -9,19 +9,16 @@
                 <CuresBloodloss>true</CuresBloodloss>
             </li>
         </value>
-
-    <!-- Add Hemogen Medicine to "Blood Transufsion" surgery recipe-->
     </Operation>
-        <Operation Class="PatchOperationInsert">
-        <xpath>Defs/RecipeDefs/Recipes_Surgery_Misc[defName="BloodTransfusion"]/ingredients/li/filter/thingDefs/li[1]</xpath>
+
+    <!-- Add Blood Transfusion w/ Hemogen Blood to operations list-->
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/ThingDef[defName="Human"]/recipes/li[text()="BloodTransfusion"]</xpath>
+        <order>Append</order>
         <value>
-            <li>MedicineHemogen</li>
+            <li>MedicineHemogenBloodTransfusion</li>
         </value>
     </Operation>
 
-    <!-- Patch operation to remove fixedIngredientFilter from BloodTransfusion surgery recipe-->
-    <Operation Class="PatchOperationRemove">
-        <xpath>Defs/RecipeDefs/Recipes_Surgery_Misc[defName="BloodTransfusion"]/fixedIngredientFilter</xpath>
-    </Operation>
 
 </Patch>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MedicineBase">
+    <defName>MedicineHemogen</defName>
+    <label>hemogen medicine</label>
+    <description>A kit of industrial-era medicine that has been improved by preparing packs of Hemogen to aid in blood transufsions. It comes packaged with everything required for a blood transfusion and general medical care.</description>
+    <possessionCount>3</possessionCount>
+    <graphicData>
+      <texPath>Things/Items/HemogenMedicineIndustrial</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <MarketValue>26</MarketValue>
+      <Mass>0.50</Mass>
+      <Flammability>0.7</Flammability>
+      <MedicalPotency>0.85</MedicalPotency>
+      <MedicalQualityMax>0.85</MedicalQualityMax>
+      <DeteriorationRate>2</DeteriorationRate>
+      <WorkToMake>700</WorkToMake>
+    </statBases>
+    <costList>
+      <MedicineIndustrial>1</MedicineIndustrial>
+      <HemogenPack>1</HemogenPack>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <researchPrerequisite>MedicineProduction</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+        <Intellectual>2</Intellectual>
+      </skillRequirements>
+      <bulkRecipeCount>4</bulkRecipeCount>
+    </recipeMaker>
+    <allowedArchonexusCount>10</allowedArchonexusCount>
+    <modExtensions>
+      <li Class="HemogenMedicineBloodloss.CuresBloodlossModExtension">
+        <CuresBloodloss>true</CuresBloodloss>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

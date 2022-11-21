@@ -53,7 +53,7 @@ namespace HemogenMedicineBloodloss
 
         public override string SettingsCategory()
         {
-            return "Hemogen Meds Cure Bloodloss";
+            return "Hemogen Medicine Enhanced";
         }
 
     }

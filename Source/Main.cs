@@ -33,21 +33,16 @@ namespace HemogenMedicineBloodloss
                         Hediff bloodloss = patient.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.BloodLoss);
                         if (bloodloss != null)
                         {
-                            //remove hediff BloodLoss
-                            patient.health.RemoveHediff(bloodloss);
+                            //check if our mod settings allow medicine to heal bloodloss
+                            if (LoadedModManager.GetMod<HemogenMedicineBloodlossConfig>().settings.shouldMedicineHealBloodloss)
+                            {
+                                //lower severity of hediff BloodLoss
+                                bloodloss.Severity -= LoadedModManager.GetMod<HemogenMedicineBloodlossConfig>().settings.bloodlossHealAmount;
+                            }
                         }
                     }
                 }
             }
-        }
-    }
-
-
-    public class HemogenMedicineBloodlossConfig : Mod
-    {
-        public HemogenMedicineBloodlossConfig(ModContentPack content) : base(content)
-        {
-            Log.Message("Inherited HemogenMedicineBloodloss Config class loaded");
         }
     }
 }

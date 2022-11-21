@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
+
+    <!-- Add "CuresBloodloss" modd extension to hemogen medicine -->
     <Operation Class="PatchOperationAddModExtension">
         <xpath>Defs/ThingDef[defName="MedicineHemogen"]</xpath>
         <value>
@@ -7,5 +9,19 @@
                 <CuresBloodloss>true</CuresBloodloss>
             </li>
         </value>
+
+    <!-- Add Hemogen Medicine to "Blood Transufsion" surgery recipe-->
     </Operation>
+        <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDefs/Recipes_Surgery_Misc[defName="BloodTransfusion"]/ingredients/li/filter/thingDefs/li[1]</xpath>
+        <value>
+            <li>MedicineHemogen</li>
+        </value>
+    </Operation>
+
+    <!-- Patch operation to remove fixedIngredientFilter from BloodTransfusion surgery recipe-->
+    <Operation Class="PatchOperationRemove">
+        <xpath>Defs/RecipeDefs/Recipes_Surgery_Misc[defName="BloodTransfusion"]/fixedIngredientFilter</xpath>
+    </Operation>
+
 </Patch>

@@ -74,7 +74,7 @@ namespace HemogenMedicineBloodloss
 				return base.GetIngredientCount(ing, bill);
 			}
             
-            Log.Message("Ingredient count for hemogen blood transfusion: " + Mathf.Min((float)bill.Map.listerThings.ThingsOfDef(HemogenMedicineThingDefOf.MedicineHemogen).Sum((Thing x) => x.stackCount), firstHediffOfDef.Severity / LoadedModManager.GetMod<HemogenMedicineBloodlossConfig>().settings.bloodlossHealAmount));
+            //Log.Message("Ingredient count for hemogen blood transfusion: " + Mathf.Min((float)bill.Map.listerThings.ThingsOfDef(HemogenMedicineThingDefOf.MedicineHemogen).Sum((Thing x) => x.stackCount), firstHediffOfDef.Severity / LoadedModManager.GetMod<HemogenMedicineBloodlossConfig>().settings.bloodlossHealAmount));
             return Mathf.Min((float)bill.Map.listerThings.ThingsOfDef(HemogenMedicineThingDefOf.MedicineHemogen).Sum((Thing x) => x.stackCount), firstHediffOfDef.Severity / LoadedModManager.GetMod<HemogenMedicineBloodlossConfig>().settings.bloodlossHealAmount);
 
         }

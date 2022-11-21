@@ -21,10 +21,15 @@
 			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
 		</li>
 	</modDependencies>
+	
+    <loadAfter>
+        <li>brrainz.harmony</li>
+		<li>azurami.bloodmedicine</li>
+    </loadAfter>
 
 	<incompatibleWith>
 		<!-- <li>arvkus.template</li> -->
 	</incompatibleWith>
 
-	<description>A simple mod that causes Azurami's "Hemogen Medicine" to cure bloodloss when used to tend a pawn.</description>
+	<description>A mod that enables Azurami's "Hemogen Medicine" to treat to bloodloss in several ways.\n-Whenever you tend a pawn's injuries, and are using Hemogen Medicine, it will treat their bloodloss by a variable percentage (adjustable in mod settings).\n-A new operation has been added. "Hemogen Medicine Blood Transfusion". Treats bloodloss, using the same variable percentage that is adjustable in the mod settings. This operation also restores Hemogen to Hemogenic individuals.</description>
 </ModMetaData>

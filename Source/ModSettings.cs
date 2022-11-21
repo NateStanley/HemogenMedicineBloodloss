@@ -44,9 +44,7 @@ namespace HemogenMedicineBloodloss
             listingStandard.CheckboxLabeled("Should hemogen medicine heal bloodloss?", ref settings.shouldMedicineHealBloodloss);
             listingStandard.Label("\t--Only affects the treatment of bloodloss when tending other wounds with hemogen medicine.\n\t--No matter what, you will still be able to perform blood transfusions with hemogen medicine.\n\n");
            
-            //listingStandard.Label("Bloodloss heal amount: " + settings.bloodlossHealAmount +"f");
             settings.bloodlossHealAmount = listingStandard.SliderLabeled("Bloodloss heal amount: " + bloodLossHealAmountString + "f", settings.bloodlossHealAmount, 0f, 1f);
-            //settings.bloodlossHealAmount = listingStandard.Slider(settings.bloodlossHealAmount, 0.1f, 1.0f);
             listingStandard.Label("\t--The default vanilla Hemogen Packs heal value is 0.35f");
 
             listingStandard.End();

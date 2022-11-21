@@ -3,7 +3,7 @@
   <RecipeDef ParentName="SurgeryFlesh">
     <defName>MedicineHemogenBloodTransfusion</defName>
     <label>hemogen medicine blood transfusion</label>
-    <description>Use hemogen medicine to reduce the effects of blood loss. Due to using a prepared medical kit, it is faster than using a hemogen pack. Each hemogen medicine used recovers 35% blood loss. The operation will also restore hemogen to hemogenic individuals.</description>
+    <description>Use hemogen medicine to reduce the effects of blood loss. Due to using a prepared medical kit, it is faster than using a hemogen pack. Each hemogen medicine used recovers some blood loss, configurable in mod settings. The operation will also restore hemogen to hemogenic individuals.</description>
     <jobString>performing blood transfusion with hemogen medicine on TargetA.</jobString>
     <workAmount>300</workAmount>
     <hideBodyPartNames>true</hideBodyPartNames>

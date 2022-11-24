@@ -10,4 +10,13 @@
         </value>
     </Operation>
 
+    <!-- Add Hemogen Packs category to vanilla hemogen pack-->
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/ThingDef[defName="HemogenPack"]/thingCategories/li[text()="Foods"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>HemogenPacks</li>
+        </value>
+    </Operation>
+
 </Patch>

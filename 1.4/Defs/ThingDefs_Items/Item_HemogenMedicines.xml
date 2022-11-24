@@ -21,23 +21,7 @@
       <DeteriorationRate>2</DeteriorationRate>
       <WorkToMake>700</WorkToMake>
     </statBases>
-    <costList>
-      <MedicineIndustrial>1</MedicineIndustrial>
-      <HemogenPack>1</HemogenPack>
-    </costList>
-    <recipeMaker>
-      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
-      <workSkill>Intellectual</workSkill>
-      <recipeUsers>
-        <li>DrugLab</li>
-      </recipeUsers>
-      <researchPrerequisite>MedicineProduction</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>4</Crafting>
-        <Intellectual>2</Intellectual>
-      </skillRequirements>
-      <bulkRecipeCount>4</bulkRecipeCount>
-    </recipeMaker>
+
     <allowedArchonexusCount>10</allowedArchonexusCount>
     <modExtensions>
       <li Class="HemogenMedicineBloodloss.CuresBloodlossModExtension">
@@ -45,5 +29,84 @@
       </li>
     </modExtensions>
   </ThingDef>
+
+  <RecipeDef Name = "MakeMedicineHemogen">
+    <defName>Make_MedicineHemogen</defName>
+    <label>make hemogen medicine</label>
+    <description>Make hemogen medicine using medicine and a pack of natural or artificial hemogen.</description>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <soundWorking>Recipe_Drug</soundWorking>
+    <workAmount>700</workAmount>
+    <researchPrerequisite>MedicineProduction</researchPrerequisite>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MedicineIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>HemogenPacks</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>HemogenPacks</li>
+      </categories>
+    </fixedIngredientFilter>
+    <products>
+      <MedicineHemogen>1</MedicineHemogen>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef Name = "BulkMakeMedicineHemogen">
+    <defName>Make_BulkMedicineHemogen</defName>
+    <label>make hemogen medicine x4</label>
+    <description>Make hemogen medicine using medicine and a pack of natural or artificial hemogen.</description>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <soundWorking>Recipe_Drug</soundWorking>
+    <workAmount>2800</workAmount>
+    <researchPrerequisite>MedicineProduction</researchPrerequisite>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MedicineIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>HemogenPacks</li>
+          </categories>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>HemogenPacks</li>
+      </categories>
+    </fixedIngredientFilter>
+    <products>
+      <MedicineHemogen>4</MedicineHemogen>
+    </products>
+  </RecipeDef>
+
 
 </Defs>

@@ -24,6 +24,7 @@
 	<incompatibleWith>
 		<li>dogwithafro.truebloodmedicine</li>
 		<li>azurami.bloodmedicine</li>
+		<li>seohyeon.OptimizationMeats</li>
 	</incompatibleWith>
 
 	<description>A mod inspired by Azurami's "Hemogen Medicine" to treat bloodloss in several ways.\n-Whenever you tend a pawn's injuries, and are using Hemogen Medicine, it will treat their bloodloss by a variable percentage (adjustable in mod settings).\n-A new operation has been added. "Hemogen Medicine Blood Transfusion". Treats bloodloss, using the same variable percentage that is adjustable in the mod settings. This operation also restores Hemogen to Hemogenic individuals.</description>

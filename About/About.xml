@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<packageId>dogwithafro.truebloodmedicine</packageId>
-	<name>Hemogen Medicine Cures Bloodloss</name>
+	<packageId>dogwithafro.hemogenmedicine</packageId>
+	<name>Hemogen Medicine Enhanced</name>
 	<author>Dog with Afro</author>
 	<supportedVersions>
 		<li>1.4</li>
 	</supportedVersions>
 
 	<modDependencies>
-		<li>
-			<packageId>azurami.bloodmedicine</packageId>
-			<displayName>Hemogen Medicine</displayName>
-			<downloadUrl>https://steamcommunity.com/workshop/filedetails/?id=2888363855</downloadUrl>
-			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=28883638557</steamWorkshopUrl>
-		</li>
 		<li>
 			<packageId>brrainz.harmony</packageId>
 			<displayName>Harmony</displayName>
@@ -25,11 +19,13 @@
     <loadAfter>
         <li>brrainz.harmony</li>
 		<li>azurami.bloodmedicine</li>
+		<li>seohyeon.OptimizationMeats</li>
     </loadAfter>
 
 	<incompatibleWith>
-		<!-- <li>arvkus.template</li> -->
+		<li>dogwithafro.truebloodmedicine</li>
+		<li>azurami.bloodmedicine</li>
 	</incompatibleWith>
 
-	<description>A mod that enables Azurami's "Hemogen Medicine" to treat to bloodloss in several ways.\n-Whenever you tend a pawn's injuries, and are using Hemogen Medicine, it will treat their bloodloss by a variable percentage (adjustable in mod settings).\n-A new operation has been added. "Hemogen Medicine Blood Transfusion". Treats bloodloss, using the same variable percentage that is adjustable in the mod settings. This operation also restores Hemogen to Hemogenic individuals.</description>
+	<description>A mod inspired by Azurami's "Hemogen Medicine" to treat bloodloss in several ways.\n-Whenever you tend a pawn's injuries, and are using Hemogen Medicine, it will treat their bloodloss by a variable percentage (adjustable in mod settings).\n-A new operation has been added. "Hemogen Medicine Blood Transfusion". Treats bloodloss, using the same variable percentage that is adjustable in the mod settings. This operation also restores Hemogen to Hemogenic individuals.</description>
 </ModMetaData>

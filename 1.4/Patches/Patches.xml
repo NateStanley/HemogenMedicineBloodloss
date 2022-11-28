@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-    <!-- Add "CuresBloodloss" modd extension to hemogen medicine -->
-    <Operation Class="PatchOperationAddModExtension">
-        <xpath>Defs/ThingDef[defName="MedicineHemogen"]</xpath>
-        <value>
-            <li Class="HemogenMedicineBloodloss.CuresBloodlossModExtension">
-                <CuresBloodloss>true</CuresBloodloss>
-            </li>
-        </value>
-    </Operation>
-
     <!-- Add Blood Transfusion w/ Hemogen Blood to operations list-->
     <Operation Class="PatchOperationInsert">
         <xpath>Defs/ThingDef[defName="Human"]/recipes/li[text()="BloodTransfusion"]</xpath>
@@ -20,5 +10,13 @@
         </value>
     </Operation>
 
+    <!-- Add Hemogen Packs category to vanilla hemogen pack-->
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/ThingDef[defName="HemogenPack"]/thingCategories/li[text()="Foods"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>HemogenPacks</li>
+        </value>
+    </Operation>
 
 </Patch>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>IngestedArtificialHemogenPack</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>5</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>ingested artifical hemogen pack</label>
+        <description>I ingested an artifical hemogen pack. I can still taste it. It tastes... it tastes like raw chicken and chemicals.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

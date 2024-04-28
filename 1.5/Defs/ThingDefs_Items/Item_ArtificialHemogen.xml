@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef>
+    <defName>ArtificialHemogenPack</defName>
+    <label>artificial hemogen pack</label>
+    <description>A package of artificial hemogen that can spoil very easily. Must be refrigerated. Hemogenic humans can consume it to restore their internal hemogen stores, but it tastes awful and may make them ill. Due to it's nature, it must be crafted into hemogen medicine for it to be used for a blood transfusion.</description>
+    <category>Item</category>
+    <thingClass>ThingWithComps</thingClass>
+    <drawerType>MapMeshOnly</drawerType>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <selectable>true</selectable>
+    <stackLimit>10</stackLimit>
+    <tickerType>Rare</tickerType>
+    <possessionCount>5</possessionCount>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <alwaysHaulable>true</alwaysHaulable>
+    <pathCost>14</pathCost>
+    <allowedArchonexusCount>-1</allowedArchonexusCount>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <graphicData>
+      <texPath>Things/Items/ArtificialHemogen</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <DeteriorationRate>5</DeteriorationRate>
+      <Mass>0.50</Mass>
+      <Flammability>0.7</Flammability>
+      <Nutrition>0.1</Nutrition>
+      <Beauty>0</Beauty>
+      <MarketValue>5</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>HemogenPacks</li>
+      <li>Foods</li>
+    </thingCategories>
+    <ingestible>
+      <foodType>Fluid</foodType>
+      <preferability>DesperateOnly</preferability>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      <specialThoughtDirect>IngestedArtificialHemogenPack</specialThoughtDirect>
+      <ingestSound>HemogenPack_Consume</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetHemogen">
+          <offset>0.1</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>2</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <RecipeDef Name = "MakeArtificialHemogen">
+    <defName>Make_ArtificialHemogen</defName>
+    <label>synthesize artificial hemogen</label>
+    <description>Using raw meat, synthesize artificial hemogen.</description>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <soundWorking>Recipe_Drug</soundWorking>
+    <workAmount>1000</workAmount>
+    <researchPrerequisite>MedicineProduction</researchPrerequisite>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>100</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <products>
+      <ArtificialHemogenPack>1</ArtificialHemogenPack>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef Name = "BulkMakeArtificialHemogen">
+    <defName>Make_BulkArtificialHemogen</defName>
+    <label>synthesize artificial hemogen x4</label>
+    <description>Using raw meat, synthesize artificial hemogen.</description>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <soundWorking>Recipe_Drug</soundWorking>
+    <workAmount>4000</workAmount>
+    <researchPrerequisite>MedicineProduction</researchPrerequisite>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>400</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <products>
+      <ArtificialHemogenPack>4</ArtificialHemogenPack>
+    </products>
+  </RecipeDef>
+
+
+</Defs>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <!-- Add Blood Transfusion w/ Hemogen Blood to operations list-->
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/ThingDef[defName="Human"]/recipes/li[text()="BloodTransfusion"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>MedicineHemogenBloodTransfusion</li>
+        </value>
+    </Operation>
+
+    <!-- Add Hemogen Packs category to vanilla hemogen pack-->
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/ThingDef[defName="HemogenPack"]/thingCategories/li[text()="Foods"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>HemogenPacks</li>
+        </value>
+    </Operation>
+
+	<!-- Remove Artifical Hemogen Pack from Make Chemful From Organics -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName="Make_ChemfuelFromOrganics"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+		<value>
+			<li>ArtificialHemogenPack</li>
+		</value>
+	</Operation>
+
+
+</Patch>

@@ -16,8 +16,8 @@
       <MarketValue>26</MarketValue>
       <Mass>0.50</Mass>
       <Flammability>0.7</Flammability>
-	  <MedicalPotency>1.1</MedicalPotency>
-	  <MedicalQualityMax>1.00</MedicalQualityMax>
+      <MedicalPotency>1.1</MedicalPotency>
+      <MedicalQualityMax>1.00</MedicalQualityMax>
       <DeteriorationRate>2</DeteriorationRate>
       <WorkToMake>700</WorkToMake>
     </statBases>

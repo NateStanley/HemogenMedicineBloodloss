@@ -1,0 +1,196 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{66D0594E-7430-4F1C-A02B-1A64A81ED573}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>HemogenMedicineBloodloss</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>1.5\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>HemogenMedicineBloodloss</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Lib.Harmony.2.3.3\lib\net472\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\SteamGames\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\SteamGames\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include=".git\COMMIT_EDITMSG" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-merge-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\push-to-checkout.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\logs\refs\remotes\origin\master" />
+    <None Include=".git\objects\13\1bbab74cf0b1611aacf663bdbe48f2e02be95a" />
+    <None Include=".git\objects\15\cc75d2a18429cedd4c5b9dc181042897ac9682" />
+    <None Include=".git\objects\19\aa310962b29277eeaaa33662c65772d10839a9" />
+    <None Include=".git\objects\22\5ee30744f6faac69da58aff7e6287f8e231299" />
+    <None Include=".git\objects\23\9e4b68983e5bdf6d398121288d00e3c855c4fa" />
+    <None Include=".git\objects\27\31f0401fe7025e0b64f1d3fe57eb2efdede5b7" />
+    <None Include=".git\objects\30\7b469828cdeb7fdef90126a6841fe22de21b17" />
+    <None Include=".git\objects\32\d9d516c7a0af3908fc8c970e27eb5b2a71f6e3" />
+    <None Include=".git\objects\35\ad0103699b47c03cf3fb3dbc5a36ab32349587" />
+    <None Include=".git\objects\40\6fa5d55d1503c2673bfc430d6682b100c4233c" />
+    <None Include=".git\objects\43\5d7bbfba387cf06a34453aef2a83ca6e9bf5f1" />
+    <None Include=".git\objects\46\4197877628b4c90746e10eef3a39bc547ae85f" />
+    <None Include=".git\objects\52\450f7e069c10a10fb20543848bb0298e2454ba" />
+    <None Include=".git\objects\56\d1f66a0742d485e1ea10944cbc3820487775f2" />
+    <None Include=".git\objects\58\bad6d02ff741839c0ed4777fb77bee06c630cf" />
+    <None Include=".git\objects\5a\d9356397ba9a79dd2a006e6c65318f8c36602c" />
+    <None Include=".git\objects\6d\09d4b8ddc277672f5f0317c52121c375a2023b" />
+    <None Include=".git\objects\71\a43f63cb7b00be8c0cc4001333508620c05523" />
+    <None Include=".git\objects\7a\d20aa54943b150af478f3d6d15e092c7ec6442" />
+    <None Include=".git\objects\82\008ec6cfbd3fcb44a1e4ce32de5e030199cf84" />
+    <None Include=".git\objects\82\8c0d8bf955da1c6b709f4c9f30248401f22d45" />
+    <None Include=".git\objects\83\2d90d936e5eae8e64f25a2980f1bf09de37425" />
+    <None Include=".git\objects\83\5c1618fd6a8584d6f3b848d83e5a6b3d8e069f" />
+    <None Include=".git\objects\98\619b94c247bf4236b4307acd5fb3836de7dd97" />
+    <None Include=".git\objects\9c\bef244afe971eec426d0f91aed7219428e2371" />
+    <None Include=".git\objects\9e\3bd4fff7c8677a8968027195b894a7c65bf225" />
+    <None Include=".git\objects\a3\0aaf6e2a32a7d4e2dc032280530c7e6fc6a7a2" />
+    <None Include=".git\objects\a5\6e15c86373e9d80ca10b371a0881ccb6d804a8" />
+    <None Include=".git\objects\ae\1b0e1205b2894154678384cc4dc501190e5f2f" />
+    <None Include=".git\objects\b3\67e5cc585d5f3f29094badcaee3d7b152e9d8b" />
+    <None Include=".git\objects\b3\73569c0c9d706827646605ee9d298b2a34755e" />
+    <None Include=".git\objects\b9\f753c3568fa0886b43cf8042d13fc84a8f8a93" />
+    <None Include=".git\objects\ba\9e8559f8c83f6e185bbc1b9dc3d2b8de0459a8" />
+    <None Include=".git\objects\c0\1352306726cdc3f51fb3d1c7761d2768961a51" />
+    <None Include=".git\objects\c8\dbe85648e8f471ee31519b129a536a10af05cd" />
+    <None Include=".git\objects\c9\9e825d1217eb67b5cc61ecd1cb0fca9bed99fd" />
+    <None Include=".git\objects\d4\6af190f91d034e6c57ebeed206fd98a27111fc" />
+    <None Include=".git\objects\ec\81ea2aca506fde4d8c602ba870a4c932f2d22e" />
+    <None Include=".git\objects\f8\b4888565caadc7510be75682268d6c18edd6de" />
+    <None Include=".git\objects\pack\pack-0dc80697b8f0ccad600f71b4bac27357fbb5e0bf.idx" />
+    <None Include=".git\objects\pack\pack-0dc80697b8f0ccad600f71b4bac27357fbb5e0bf.pack" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".git\refs\remotes\origin\master" />
+    <None Include=".vs\HemogenMedicineBloodloss\FileContentIndex\0e798b12-fa98-42e3-8a1b-020c36e22fa6.vsidx" />
+    <None Include=".vs\HemogenMedicineBloodloss\FileContentIndex\190953cd-1b98-4f28-b146-0a4238780837.vsidx" />
+    <None Include=".vs\HemogenMedicineBloodloss\FileContentIndex\25c67194-deca-48f3-9121-5b74c4e0b328.vsidx" />
+    <None Include=".vs\HemogenMedicineBloodloss\FileContentIndex\2729f46c-efa9-4cf7-81f4-14f143b293f7.vsidx" />
+    <None Include=".vs\HemogenMedicineBloodloss\FileContentIndex\cdd51252-1159-4654-887f-e9ab82a19624.vsidx" />
+    <None Include=".vs\HemogenMedicineBloodloss\v17\.wsuo" />
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="packages.config" />
+    <None Include="README.md" />
+    <None Include="resources\header_template.psb" />
+    <None Include="resources\HemogenMedicine-new.psd" />
+    <None Include="resources\HemogenMedicineIndustrial.psb" />
+    <None Include="resources\Preview.psb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".git\ms-persist.xml" />
+    <Content Include="1.4\Assemblies\HemogenMedicineBloodloss.dll" />
+    <Content Include="1.4\Defs\CategoryDefs.xml" />
+    <Content Include="1.4\Defs\Recipes_Surgery\MedicineHemogenBloodTransfusion.xml" />
+    <Content Include="1.4\Defs\ThingDefs_Items\Item_ArtificialHemogen.xml" />
+    <Content Include="1.4\Defs\ThingDefs_Items\Item_HemogenMedicines.xml" />
+    <Content Include="1.4\Defs\ThoughtDefs\Thoughts_Memory_ArtificialHemogen.xml" />
+    <Content Include="1.4\Patches\Patches.xml" />
+    <Content Include="1.5\Assemblies\HemogenMedicineBloodloss.dll" />
+    <Content Include="1.5\Defs\CategoryDefs.xml" />
+    <Content Include="1.5\Defs\Recipes_Surgery\MedicineHemogenBloodTransfusion.xml" />
+    <Content Include="1.5\Defs\ThingDefs_Items\Item_ArtificialHemogen.xml" />
+    <Content Include="1.5\Defs\ThingDefs_Items\Item_HemogenMedicines.xml" />
+    <Content Include="1.5\Defs\ThoughtDefs\Thoughts_Memory_ArtificialHemogen.xml" />
+    <Content Include="1.5\Patches\Patches.xml" />
+    <Content Include="About\About.xml" />
+    <Content Include="About\post_preview3by2.png" />
+    <Content Include="About\Preview.png" />
+    <Content Include="About\PublishedFileId.txt" />
+    <Content Include="resources\credits.png" />
+    <Content Include="resources\dogwithafro.png" />
+    <Content Include="resources\faq.png" />
+    <Content Include="resources\faquestions.png" />
+    <Content Include="resources\header_template.png" />
+    <Content Include="resources\main header.png" />
+    <Content Include="resources\Preview.png" />
+    <Content Include="resources\recipe.png" />
+    <Content Include="resources\recipe_new.png" />
+    <Content Include="resources\rip.png" />
+    <Content Include="resources\special_thanks.png" />
+    <Content Include="resources\usecase.png" />
+    <Content Include="Textures\Things\Items\ArtificialHemogen\ArtificialHemogenPack_a.png" />
+    <Content Include="Textures\Things\Items\ArtificialHemogen\ArtificialHemogenPack_b.png" />
+    <Content Include="Textures\Things\Items\ArtificialHemogen\ArtificialHemogenPack_c.png" />
+    <Content Include="Textures\Things\Items\HemogenMedicineIndustrial\HemogenMedicineIndustrial_a.png" />
+    <Content Include="Textures\Things\Items\HemogenMedicineIndustrial\HemogenMedicineIndustrial_b.png" />
+    <Content Include="Textures\Things\Items\HemogenMedicineIndustrial\HemogenMedicineIndustrial_c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Source\CuresBloodlossModExtension.cs" />
+    <Compile Include="Source\HemogenMedicineThingDefOf.cs" />
+    <Compile Include="Source\Main.cs" />
+    <Compile Include="Source\ModSettings.cs" />
+    <Compile Include="Source\Recipe_BloodTransfusionHemogenMed.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\refs\tags\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

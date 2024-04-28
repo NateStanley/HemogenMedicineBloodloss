@@ -35,7 +35,7 @@ namespace HemogenMedicineBloodloss
 			float num2 = 0f;
 			for (int i = 0; i < ingredients.Count; i++)
 			{
-                num += 0.35f * (float)ingredients[i].stackCount;
+                num += LoadedModManager.GetMod<HemogenMedicineBloodlossConfig>().settings.bloodlossHealAmount * (float)ingredients[i].stackCount;
                 num2 += LoadedModManager.GetMod<HemogenMedicineBloodlossConfig>().settings.bloodlossHealAmount * (float)ingredients[i].stackCount;
 			}
 			if (num > 0f)

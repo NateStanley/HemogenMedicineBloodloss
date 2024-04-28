@@ -5,3 +5,5 @@
 # /*/Assemblies/*.pdb
 /.vscode
 # /Source
+/packages/Lib.Harmony.2.3.3
+/obj/Debug

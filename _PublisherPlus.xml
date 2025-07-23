@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Excluded>
+    <exclude>.git</exclude>
+    <exclude>.vs</exclude>
+    <exclude>About\post_preview3by2.png</exclude>
+    <exclude>bin</exclude>
+    <exclude>HemogenMedicineBloodloss.csproj</exclude>
+    <exclude>HemogenMedicineBloodloss.sln</exclude>
+    <exclude>obj</exclude>
+    <exclude>packages</exclude>
+    <exclude>README.md</exclude>
+    <exclude>resources</exclude>
+    <exclude>Source</exclude>
+  </Excluded>
+</Configuration>

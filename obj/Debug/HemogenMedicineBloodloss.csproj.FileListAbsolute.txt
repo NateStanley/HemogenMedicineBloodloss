@@ -1,0 +1,4 @@
+C:\Users\Nathan\source\repos\HemogenMedicineBloodloss\obj\Debug\HemogenMedicineBloodloss.csproj.AssemblyReference.cache
+C:\Users\Nathan\source\repos\HemogenMedicineBloodloss\obj\Debug\HemogenMedicineBloodloss.csproj.CoreCompileInputs.cache
+C:\Users\Nathan\source\repos\HemogenMedicineBloodloss\1.5\Assemblies\HemogenMedicineBloodloss.dll
+C:\Users\Nathan\source\repos\HemogenMedicineBloodloss\obj\Debug\HemogenMedicineBloodloss.dll
